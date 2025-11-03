@@ -3,6 +3,7 @@
 variable "instance_id" {
   description = "The ID of the EC2 instance to attach the volume to."
   type        = string
+  default = "ami-08b5b3a93ed654d19"
 }
 
 variable "az_name" {
