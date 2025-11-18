@@ -11,7 +11,7 @@ resource "aws_ebs_volume" "web_data_disk" {
   # Get the AZ from the EC2 instance resource
   availability_zone = aws_instance.web.availability_zone 
   
-  size              = 20 
+  size              = 10
   type              = "gp3"
   encrypted         = true
 
