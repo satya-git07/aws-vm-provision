@@ -19,3 +19,9 @@ resource "aws_ebs_volume" "web_data_disk" {
     Name = "${aws_instance.web.tags.Name}-Data-Disk"
   }
 }
+
+resource "aws_volume_attachment" "web_data_disk_att" {
+  volume_id   = aws_ebs_volume.web_data_disk.id
+  instance_id = aws_instance.web.id
+  device_name = "aws-new-disk" 
+}
